@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    /* 禁止选择窗口内容 */
+    /* user-select: none; */
+    /* BrowserWindow 窗口设置 frame: false 属性后，窗口无法拖动，设置该样式，可以按住窗口进行拖动 */
+    -webkit-app-region: drag;
+}
+
+
+.send-btn {
+    margin: 10px;
+}
+
+.show-capture {
+    display: none;
+    width: 800px;
+}
+.show-capture img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 内容安全策略(CSP)设置，'self' 表示只允许使用本地链接源，
+        'unsafe-inline' 允许使用不安全的内联设置，如 style-src 'unsafe-inline' 表示允许使用 style=".." 内联样式
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; img-src * data:; style-src 'self'">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title></title>
+</head>
+<body>
+    
+    <button id="btn" class="send-btn">发送数据给主进程</button>
+    <button id="btnChoiceFile">打开选择文件对话框</button>
+    <button id="btnCapture">抓取界面</button>
+    <div class="show-capture">
+        <img src="" />
+    </div>
+
+    <p>
+        <a href="https://github.com/" target="_blank">打开新窗口</a>
+    </p>
+
+    <!-- 以上的 <meta http-equiv...>标签的内容安全策略 img-src 'self' data:; 属性只能引用 app 内置路径，
+    不能使用外部路径，如要使用外部图片，请删除该属性，或改为 img-src * data:;
+    -->
+    <div id="rnd-size-img">
+        <!-- 可从 url 指定图片大小 -->
+        <!-- <img src="https://picsum.photos/400/400" /> -->
+        <img src="http://wxshare.url2qr.top/images/wxshare_banner.jpg" />
+    </div>
+    
+    <!-- 引入 render js -->
+    <script src="./rendererjs/index.js"></script>
+</body>
+</html>

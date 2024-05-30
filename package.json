@@ -1,0 +1,26 @@
+{
+  "name": "first-electron-project",
+  "version": "1.0.0",
+  "description": "My first electron application project. start 命令项配置的 chcp 65001 用于解决控制台输出中文乱码问题",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "chcp 65001 && nodemon --exec \"electron .\" --watch . --ext js,ts,json,html,css,scss"
+  },
+  "keywords": [
+    "electron",
+    "app",
+    "application",
+    "windows",
+    "desktop"
+  ],
+  "author": "Samdy_Chan",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.3.27"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "electron-win-state": "^1.1.22"
+  }
+}
